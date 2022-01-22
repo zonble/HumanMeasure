@@ -9,63 +9,61 @@ import systems.uom.common.USCustomary;
 
 import javax.measure.MetricPrefix;
 import javax.measure.Unit;
-import javax.measure.quantity.*;
-
 
 public class Units {
 
     // region Length
-    public static final Unit<Length> MEGAMETER = MetricPrefix.MEGA(SI.METRE);
-    public static final Unit<Length> KILOMETER = MetricPrefix.KILO(SI.METRE);
-    public static final Unit<Length> HECTOMETER = MetricPrefix.HECTO(SI.METRE);
-    public static final Unit<Length> DECAMETER = MetricPrefix.DEKA(SI.METRE);
-    public static final Unit<Length> METER = SI.METRE;
-    public static final Unit<Length> DECIMETER = MetricPrefix.DECI(SI.METRE);
-    public static final Unit<Length> CENTIMETER = MetricPrefix.CENTI(SI.METRE);
-    public static final Unit<Length> MILLIMETER = MetricPrefix.MILLI(SI.METRE);
-    public static final Unit<Length> MICROMETER = MetricPrefix.MICRO(SI.METRE);
-    public static final Unit<Length> NANOMETER = MetricPrefix.NANO(SI.METRE);
-    public static final Unit<Length> PICOMETER = MetricPrefix.PICO(SI.METRE);
-    public static final Unit<Length> INCH = USCustomary.INCH;
-    public static final Unit<Length> FOOT = USCustomary.FOOT;
-    public static final Unit<Length> YARD = USCustomary.YARD;
-    public static final Unit<Length> MILE = USCustomary.MILE;
+    public static final Unit<javax.measure.quantity.Length> MEGAMETER = MetricPrefix.MEGA(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> KILOMETER = MetricPrefix.KILO(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> HECTOMETER = MetricPrefix.HECTO(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> DECAMETER = MetricPrefix.DEKA(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> METER = SI.METRE;
+    public static final Unit<javax.measure.quantity.Length> DECIMETER = MetricPrefix.DECI(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> CENTIMETER = MetricPrefix.CENTI(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> MILLIMETER = MetricPrefix.MILLI(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> MICROMETER = MetricPrefix.MICRO(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> NANOMETER = MetricPrefix.NANO(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> PICOMETER = MetricPrefix.PICO(SI.METRE);
+    public static final Unit<javax.measure.quantity.Length> INCH = USCustomary.INCH;
+    public static final Unit<javax.measure.quantity.Length> FOOT = USCustomary.FOOT;
+    public static final Unit<javax.measure.quantity.Length> YARD = USCustomary.YARD;
+    public static final Unit<javax.measure.quantity.Length> MILE = USCustomary.MILE;
     // endregion
 
     // region Speed
-    public static final Unit<Speed> METERS_PER_MINUTE = (Unit<Speed>) METER.divide(USCustomary.MINUTE);
-    public static final Unit<Speed> KILOMETERS_PER_HOUR = (Unit<Speed>) KILOMETER.divide(USCustomary.HOUR);
-    public static final Unit<Speed> MILES_PER_HOUR = USCustomary.MILE_PER_HOUR;
+    public static final Unit<javax.measure.quantity.Speed> METERS_PER_MINUTE = (Unit<javax.measure.quantity.Speed>) METER.divide(USCustomary.MINUTE);
+    public static final Unit<javax.measure.quantity.Speed> KILOMETERS_PER_HOUR = (Unit<javax.measure.quantity.Speed>) KILOMETER.divide(USCustomary.HOUR);
+    public static final Unit<javax.measure.quantity.Speed> MILES_PER_HOUR = USCustomary.MILE_PER_HOUR;
     // endregion
 
     // region Temperature
-    public static final Unit<Temperature> CELSIUS = tech.units.indriya.unit.Units.CELSIUS;
-    public static final Unit<Temperature> FFAHRENHEIT = USCustomary.FAHRENHEIT;
-    public static final Unit<Temperature> KELVIN = tech.units.indriya.unit.Units.KELVIN;
+    public static final Unit<javax.measure.quantity.Temperature> CELSIUS = tech.units.indriya.unit.Units.CELSIUS;
+    public static final Unit<javax.measure.quantity.Temperature> FFAHRENHEIT = USCustomary.FAHRENHEIT;
+    public static final Unit<javax.measure.quantity.Temperature> KELVIN = tech.units.indriya.unit.Units.KELVIN;
     // endregion
 
     // region Pressure
-    public static final Unit<Pressure> KILOPASCAL = MetricPrefix.KILO(tech.units.indriya.unit.Units.PASCAL);
-    public static final Unit<Pressure> PASCAL = tech.units.indriya.unit.Units.PASCAL;
-    public static final Unit<Pressure> POUNDS_PER_SQUARE_INCH = (Unit<Pressure>) Imperial.POUND_FORCE.divide(INCH.pow(2));
+    public static final Unit<javax.measure.quantity.Pressure> KILOPASCAL = MetricPrefix.KILO(tech.units.indriya.unit.Units.PASCAL);
+    public static final Unit<javax.measure.quantity.Pressure> PASCAL = tech.units.indriya.unit.Units.PASCAL;
+    public static final Unit<javax.measure.quantity.Pressure> POUNDS_PER_SQUARE_INCH = (Unit<javax.measure.quantity.Pressure>) Imperial.POUND_FORCE.divide(INCH.pow(2));
     // endregion
 
     // region Mass
-    public static final Unit<Mass> MEGAGRAM = MetricPrefix.MEGA(SI.GRAM);
-    public static final Unit<Mass> KILOMGRAM = MetricPrefix.KILO(SI.GRAM);
-    public static final Unit<Mass> HECTOGEAM = MetricPrefix.HECTO(SI.GRAM);
-    public static final Unit<Mass> DECAGRAM = MetricPrefix.DEKA(SI.GRAM);
-    public static final Unit<Mass> GRAM = SI.GRAM;
-    public static final Unit<Mass> DECIGRAM = MetricPrefix.DECI(SI.GRAM);
-    public static final Unit<Mass> CENTIGRAM = MetricPrefix.CENTI(SI.GRAM);
-    public static final Unit<Mass> MILLIGRAM = MetricPrefix.MILLI(SI.GRAM);
-    public static final Unit<Mass> MICROGRAM = MetricPrefix.MICRO(SI.GRAM);
-    public static final Unit<Mass> NANOGRAM = MetricPrefix.NANO(SI.GRAM);
-    public static final Unit<Mass> PICOGRAM = MetricPrefix.PICO(SI.GRAM);
-    public static final Unit<Mass> POUND = USCustomary.POUND;
-    public static final Unit<Mass> OUNCE = USCustomary.OUNCE;
-    public static final Unit<Mass> METRIC_TON = Imperial.METRIC_TON;
-    public static final Unit<Mass> TON_US = USCustomary.TON;
-    public static final Unit<Mass> TON_UK = Imperial.TON_UK;
+    public static final Unit<javax.measure.quantity.Mass> MEGAGRAM = MetricPrefix.MEGA(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> KILOMGRAM = MetricPrefix.KILO(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> HECTOGEAM = MetricPrefix.HECTO(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> DECAGRAM = MetricPrefix.DEKA(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> GRAM = SI.GRAM;
+    public static final Unit<javax.measure.quantity.Mass> DECIGRAM = MetricPrefix.DECI(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> CENTIGRAM = MetricPrefix.CENTI(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> MILLIGRAM = MetricPrefix.MILLI(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> MICROGRAM = MetricPrefix.MICRO(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> NANOGRAM = MetricPrefix.NANO(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> PICOGRAM = MetricPrefix.PICO(SI.GRAM);
+    public static final Unit<javax.measure.quantity.Mass> POUND = USCustomary.POUND;
+    public static final Unit<javax.measure.quantity.Mass> OUNCE = USCustomary.OUNCE;
+    public static final Unit<javax.measure.quantity.Mass> METRIC_TON = Imperial.METRIC_TON;
+    public static final Unit<javax.measure.quantity.Mass> TON_US = USCustomary.TON;
+    public static final Unit<javax.measure.quantity.Mass> TON_UK = Imperial.TON_UK;
     // endregion
 }
