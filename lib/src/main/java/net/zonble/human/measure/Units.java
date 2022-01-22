@@ -4,13 +4,13 @@
 package net.zonble.human.measure;
 
 import si.uom.SI;
+import systems.uom.common.Imperial;
 import systems.uom.common.USCustomary;
 
 import javax.measure.MetricPrefix;
 import javax.measure.Unit;
 import javax.measure.quantity.*;
 
-import static systems.uom.common.Imperial.POUND_FORCE;
 
 public class Units {
 
@@ -35,7 +35,7 @@ public class Units {
     // region Speed
     public static final Unit<Speed> METERS_PER_MINUTE = (Unit<Speed>) METER.divide(USCustomary.MINUTE);
     public static final Unit<Speed> KILOMETERS_PER_HOUR = (Unit<Speed>) KILOMETER.divide(USCustomary.HOUR);
-    public static final Unit<Speed> MILES_PER_HOUR = (Unit<Speed>) MILE.divide(USCustomary.HOUR);
+    public static final Unit<Speed> MILES_PER_HOUR = USCustomary.MILE_PER_HOUR;
     // endregion
 
     // region Temperature
@@ -47,7 +47,7 @@ public class Units {
     // region Pressure
     public static final Unit<Pressure> KILOPASCAL = MetricPrefix.KILO(tech.units.indriya.unit.Units.PASCAL);
     public static final Unit<Pressure> PASCAL = tech.units.indriya.unit.Units.PASCAL;
-    public static final Unit<Pressure> POUNDS_PER_SQUARE_INCH = (Unit<Pressure>) POUND_FORCE.divide(INCH.pow(2));
+    public static final Unit<Pressure> POUNDS_PER_SQUARE_INCH = (Unit<Pressure>) Imperial.POUND_FORCE.divide(INCH.pow(2));
     // endregion
 
     // region Mass
@@ -64,5 +64,8 @@ public class Units {
     public static final Unit<Mass> PICOGRAM = MetricPrefix.PICO(SI.GRAM);
     public static final Unit<Mass> POUND = USCustomary.POUND;
     public static final Unit<Mass> OUNCE = USCustomary.OUNCE;
+    public static final Unit<Mass> METRIC_TON = Imperial.METRIC_TON;
+    public static final Unit<Mass> TON_US = USCustomary.TON;
+    public static final Unit<Mass> TON_UK = Imperial.TON_UK;
     // endregion
 }
